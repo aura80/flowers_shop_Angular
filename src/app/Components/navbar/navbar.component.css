@@ -1,0 +1,18 @@
+.magnolia {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5%;
+    height: 5%;
+    align-content: left;
+}
+
+.homepage {
+    background: #FFE1E1;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Edwardian Script ITC";
+    font-size: 260%;
+}

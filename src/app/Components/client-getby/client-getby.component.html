@@ -1,0 +1,60 @@
+<div class="inline mt-3 px-5 bznl">
+    <button type="submit" class="btn ml-3 btn-primary">
+        <a href="#!" routerLink="/clients" routerLinkActive="active" style="color: white;">Back to
+            Clients</a></button>
+</div>
+
+<br>
+
+<h2 class="px-5 mt-2 py-1 ms-2" style="float: inline-start; ">Find by Id</h2>
+<pre> </pre>
+<pre></pre>
+<div class="px-5 py-2" *ngIf="this.loading != true" style="font-weight: 600; font-size: x-large;">
+    <ul>
+        <li class="cursor-pointer p-4 px-lg-5 ml-3 mb-3">
+            {{ varByData.name }}
+        </li>
+    </ul>
+</div>
+
+
+<table class="table table-info table-responsive table-bordered table-striped table-hover" *ngIf="this.loading != true"
+    style="text-align: center; vertical-align: middle;">
+    <col style="width: 5%">
+    <col style="width: 11%">
+    <col style="width: 22%">
+    <col>
+    <col style="width: 8%">
+    <col style="width: 9%">
+    <col style="width: 26%">
+    <thead>
+        <tr class="table-primary">
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Orders</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ varByData.id }}</td>
+            <td>{{ varByData.name }}</td>
+            <td style="word-wrap: break-all;">{{ varByData.address }}</td>
+            <td>{{ varByData.email }}</td>
+            <td style="word-wrap: break-word;">{{ varByData.password }}</td>
+            <td>{{ varByData.phone }}</td>
+            <td style="word-wrap: break-word;">
+                <ul>
+                    <li class="cursor-pointer p-1 btn-success" (click)="getOrders(varByData.id)">
+                        <p style="font-size: x-large; font-weight: 700; color:rgb(18, 18, 166)">View Orders</p>
+                        {{ ordersByData }}
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+
+</table>

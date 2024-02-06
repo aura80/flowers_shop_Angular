@@ -1,0 +1,53 @@
+<section class="vh-100 bg-image d-flex"
+    style="background-image: url('assets/deco9.png'); background-repeat: no-repeat; background-size:cover; ">
+
+    <div class="inline mt-5 px-5" style="margin-left: 650px;">
+        <button type="submit" class="btn mr-3 btn-primary">
+            <a href="#!" routerLink="/dashboard" routerLinkActive="active" style="color: white;">Back to
+                Dashboard</a></button>
+    </div>
+    <pre></pre>
+
+    <div class="mask d-flex align-items-center h-75 gradient-custom-3" style="margin-left: 150px;
+    margin-right: auto; ">
+
+
+        <div class="mt-4" style="margin-bottom: 30px; margin-top: 30px; ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-responsive table-bordered table-striped table-hover"
+                            style="text-align: center;">
+                            <thead>
+                                <tr class="table-primary">
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let product of products; let i = index">
+                                    <td>{{ i + 1 }}</td>
+                                    <td>{{ product.name }}</td>
+                                    <td>{{ product.description }}</td>
+                                    <td>{{ product.price }}</td>
+                                    <td>{{ product.category }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="py-1 mt-5" style="background: rgb(255, 192, 254);  position: fixed; left: 0; bottom: 0; width: 100%">
+        <div class="container px-4 px-lg-5">
+            <p class="m-0 text-center text-white">&copy; 2023 - Aura's Website. All Rights Reserved. </p>
+        </div>
+    </footer>
+
+</section>

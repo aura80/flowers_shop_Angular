@@ -1,0 +1,28 @@
+#youtube {
+    background-color: white;
+}
+
+h4 {
+    text-align: center;
+}
+
+/* #FFE1E1 */
+.homepage {
+    background: #f1e0f4;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    align-content: center;
+}
+
+.hov-color:hover {
+    background-color: fuchsia;
+}
+
+/* slide show */
+
+

@@ -1,0 +1,60 @@
+<div class="inline mt-3 px-5 bznl">
+    <button type="submit" class="btn ml-3 btn-primary">
+        <a href="#!" routerLink="/orders" routerLinkActive="active" style="color: white;">Back to
+            Orders</a></button>
+</div>
+
+<br>
+
+<h2 class="px-5 mt-2 py-1 ms-2" style="float: inline-start; ">Find by Id</h2>
+<pre> </pre>
+<pre></pre>
+<div class="px-5 py-2" style="font-weight: 600; font-size: x-large;">
+    <ul>
+        <li class="cursor-pointer p-4 px-lg-5 ml-3 mb-3">
+            {{ varByData.name }}
+        </li>
+    </ul>
+</div>
+
+
+<table class="table table-info table-responsive table-bordered table-striped table-hover"
+    style="text-align: center; vertical-align: middle;">
+    <col style="width: 5%">
+    <col style="width: 11%">
+    <col style="width: 22%">
+    <col>
+    <col>
+    <col style="width: 9%">
+    <col style="width: 25%">
+    <thead>
+        <tr class="table-primary">
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Order No.</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Status</th>
+            <th scope="col">Creation Date</th>
+            <th scope="col">Client</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ varByData.id }}</td>
+            <td>{{ varByData.name }}</td>
+            <td style="word-wrap: break-all;">{{ varByData.orderNo }}</td>
+            <td>{{ varByData.quantity }}</td>
+            <td style="word-wrap: break-word;">{{ varByData.status }}</td>
+            <td>{{ varByData.creationDate }}</td>
+            <td style="word-wrap: break-word;">
+                <ul>
+                    <li class="cursor-pointer p-1 btn-success" (click)="getClients(varByData.id)">
+                        <p style="font-size: x-large; font-weight: 700; color:rgb(18, 18, 166)">View Client</p>
+                        {{ clientsByData }}
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+
+</table>

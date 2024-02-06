@@ -1,0 +1,25 @@
+button {
+    width: 30%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #ff99ff;
+    border-color: #ff99ff;
+}
+
+.btn-primary:hover {
+    background-color: #cc00cc;
+    border-color: #cc00cc;
+}
+
+.btn-primary:disabled,
+.btn-primary:disabled {
+    background-color: #ffccff;
+    border-color: #ffccff;
+}
+
+.text-primary:hover {
+    font-size: large;
+}

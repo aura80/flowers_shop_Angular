@@ -1,0 +1,88 @@
+<div class="inline mt-3 px-5 bznl">
+    <button type="submit" class="btn ml-3 btn-primary">
+        <a href="#!" routerLink="/clients" routerLinkActive="active" style="color: white;">Back to
+            Clients</a></button>
+</div>
+
+<br>
+
+<div class="tab-pane fade show active  d-flex justify-content-center align-items-center" id="home" role="tabpanel"
+    aria-labelledby="home-tab">
+
+    <div class="pt-4"></div>
+    <div class="card justify-content-center align-items-center" style="align-content: center;">
+        <div class="card-body " *ngIf="this.loading != true" style="background-color: aqua;">
+
+            <form autocomplete="on">
+
+                <h1 style=" font-size: x-large;">
+                    <div>
+                        <p>
+                            <!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                            <svg class='row mt-3 mx-4 mb-0 d-flex justify-content-center align-items-center '
+                                style="width: 6%; height: 6%; align-items: middle;" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path
+                                    d="M480 96c17.7 0 32 14.3 32 32s-14.3 32-32 32l-208 0 0-64 208 0zM320 288c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32s14.3-32 32-32h64zm64-64c0 17.7-14.3 32-32 32H304c-17.7 0-32-14.3-32-32s14.3-32 32-32h48c17.7 0 32 14.3 32 32zM288 384c17.7 0 32 14.3 32 32s-14.3 32-32 32H224c-17.7 0-32-14.3-32-32s14.3-32 32-32h64zm-88-96l.6 0c-5.4 9.4-8.6 20.3-8.6 32c0 13.2 4 25.4 10.8 35.6C177.9 364.3 160 388.1 160 416c0 11.7 3.1 22.6 8.6 32H160C71.6 448 0 376.4 0 288l0-61.7c0-42.4 16.9-83.1 46.9-113.1l11.6-11.6C82.5 77.5 115.1 64 149 64l27 0c35.3 0 64 28.7 64 64v88c0 22.1-17.9 40-40 40s-40-17.9-40-40V160c0-8.8-7.2-16-16-16s-16 7.2-16 16v56c0 39.8 32.2 72 72 72z" />
+                            </svg>
+                        </p>
+                        UPDATE CLIENT
+                    </div>
+                </h1>
+
+                <div class="row mt-4 d-flex justify-content-center align-items-center">
+
+                    <div class="form-group col-md-5">
+                        <label for="name">Name</label>
+                        <input type="text" [(ngModel)]="this.client.name" name="name" class="form-control mt-1"
+                            style="border-color: rgb(10, 67, 67);" id="name" placeholder="Enter the name" required
+                            minlength="3">
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label for="address">Address</label>
+                        <input type="text" [(ngModel)]="this.client.address" name="address" class="form-control mt-1"
+                            style="border-color: rgb(10, 67, 67);" id="address" placeholder="Enter the address" required
+                            minlength="5">
+                    </div>
+
+                    <div class="form-group col-md-5 mt-4">
+                        <label for="email">Email</label>
+                        <input type="email" [(ngModel)]="this.client.email" name="email" class="form-control mt-1"
+                            style="border-color: rgb(10, 67, 67);" id="email" placeholder="Enter the email" required
+                            minlength="5">
+                    </div>
+                    <div class="form-group col-md-5 mt-4">
+                        <label for="phone">Phone No.</label>
+                        <input type="text" [(ngModel)]="this.client.phone" name="phone" class="form-control mt-1"
+                            style="border-color: rgb(10, 67, 67);" id="phone" placeholder="Enter the phone">
+                    </div>
+
+                </div>
+
+                <div class="inline mt-5 d-flex justify-content-center align-items-center">
+
+                    <button type="submit" (click)="updateClientData()"
+                        class="btn btn-sm ms-2 btn-primary">Update</button>
+                    <!-- [disabled]="clientForm.invalid" -->
+                    <pre> </pre>
+                    <button type="reset" class="btn btn-sm ms-2 btn-secondary">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<pre> </pre>
+
+
+<div class="card-body">
+    <img src="assets/partydeco.png" alt="" style="display:block; margin: auto; width: 20%; height: 20%;">
+</div>
+
+
+<footer class="py-1" style="background: rgb(255, 192, 254); position: fixed; left: 0; bottom: 0; width: 100%">
+    <div class="container px-4 px-lg-5">
+        <p class="m-0 text-center text-white">&copy; 2023 - Aura's Website. All Rights Reserved. </p>
+    </div>
+</footer>

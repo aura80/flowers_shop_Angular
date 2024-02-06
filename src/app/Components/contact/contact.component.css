@@ -1,0 +1,33 @@
+.mid{
+    margin-left: 900px;
+    margin-right: auto;
+    width: 40rem;
+}
+
+span::before {
+  font-weight: bold;
+}
+
+.fa-map-marker::before {
+  content: '🔗';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.fontawesomesvg {
+  width: 1em;
+  height: 1em;
+  margin-right: 5px;
+}
+
+  .bg {
+    background-image: url("https://pixabay.com/photos/flower-poppy-field-red-flower-100263/");
+  
+    height: 100%; 
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

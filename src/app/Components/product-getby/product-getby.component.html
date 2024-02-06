@@ -1,0 +1,48 @@
+<div class="inline mt-3 px-5 bznl">
+    <button type="submit" class="btn ml-3 btn-primary">
+        <a href="#!" routerLink="/products" routerLinkActive="active" style="color: white;">Back to
+            Products</a></button>
+</div>
+
+<br>
+
+<h2 class="px-5 mt-2 py-1 ms-2" style="float: inline-start; ">Find by Id</h2>
+<pre> </pre><pre></pre>
+<div class="px-5 py-2" style="font-weight: 600; font-size: x-large;">
+    <ul >
+        <li class="cursor-pointer p-4 px-lg-5 ml-3 mb-3">
+           {{ varByData.name }}
+        </li>
+    </ul>
+</div>
+
+<div class="card" style="margin-left: 5%; margin-right: 5%; ">
+<table class="table table-info table-responsive table-bordered table-striped table-hover"
+    style="text-align: center; vertical-align: middle; margin-bottom: auto;">
+    <col style="width: 3%">
+    <col style="width: 10%">
+    <col style="width: 15%">
+    <col style="width: 5%">
+    <col style="width: 7%">
+    <thead>
+        <tr class="table-primary">
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ varByData.id }}</td>
+            <td>{{ varByData.name }}</td>
+            <td style="word-wrap: break-all;">{{ varByData.description }}</td>
+            <td>{{ varByData.price }}</td>
+            <td style="word-wrap: break-word;">{{ varByData.category }}</td>
+        </tr>
+    </tbody>
+
+</table>
+</div>
+
